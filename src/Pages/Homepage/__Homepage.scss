@@ -1,0 +1,11 @@
+.lodge__cover {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  padding: 20px;
+}
+.lodgement__container {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+}
