@@ -1,22 +1,25 @@
 import React from "react";
 import { Data } from "../../Data";
+import backgroundHomePage from "./background_homepage.png";
 import "./__Homepage.scss";
 
 export default function Homepage() {
   return (
-    <>
+    <div className="homepage">
+    <div className="background">
+    <img src={backgroundHomePage} alt="" className="background__image"/>
+    <h1 className="background__title">Chez vous et partout ailleurs </h1>
+    </div>
     <div className="lodgement__container">
       {Data.map((postDetail, index) => {
         return (
             <>
-              {/* <h1>{postDetail.title}</h1>;<p>{postDetail.description}</p>; */}
-              <img src={postDetail.cover} alt="" className="lodge__cover" />
-              {/* <p>{postDetail.host.name}</p>;
-              <img src={postDetail.host.picture} alt="" /> */}
+              <span>{postDetail.title}</span>;
+              <img src={postDetail.cover} alt= {postDetail.title} className="lodge__cover" />
             </>
         );
       })}
       </div>
-    </>
+    </div>
   );
 }
