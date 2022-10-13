@@ -1,22 +1,54 @@
-.lodge__cover {
-  width: 340px;
-  height: 340px;
-  object-fit: cover;
-  padding: 20px;
-}
-.lodgement__container {
+.lodgementContainer {
+  position: relative;
   display: flex;
-  margin: 20px;
+  justify-content: center;
   flex-wrap: wrap;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  padding: 25px;
 }
 
+.lodgementLink {
+}
 
+.box {
+  position: relative;
+  border-radius: 25px;
+  background-color: #ff6060;
+  overflow: hidden;
+  margin: 15px;
+  width: 400px;
+  height: 340px;
+
+  &__title {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    top: 82%;
+    left: 5%;
+    font-weight: bold;
+  }
+
+  &__cover {
+    width: 400px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  &__filter {
+    position: absolute;
+    bottom: 2px;
+    background: linear-gradient(180deg, transparent 37%, rgba(0, 0, 0, 0.1));
+    width: 400px;
+    height: 106px;
+    border-radius: 25px;
+  }
+}
 
 .homepage {
   padding: 60px;
 }
-
-
 
 .background {
   position: relative;
@@ -25,9 +57,9 @@
   border-radius: 25px;
   overflow: hidden;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 100px 0;
   text-align: center;
-  
+
   &__image {
     height: 233px;
     width: 100%;
