@@ -16,7 +16,7 @@ export default function Homepage() {
           return (
             <>
           
-              <Link to =  {`/logements/:${postDetail.id}`} >
+              <Link to =  {`/logements/${postDetail.id}`} >
               <article className="box">
                   <img
                     src={postDetail.cover}
