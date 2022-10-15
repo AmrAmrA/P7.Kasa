@@ -1,5 +1,116 @@
 .star {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+}
 
+.image__lodgement {
+  border-radius: 25px;
+  width: 1240px;
+  height: 415px;
+  display: block;
+  margin: 0 auto;
+}
+
+.fullcard {
+  padding: 60px;
+}
+
+.lodgementDescription {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px 0px 60px;
+}
+
+.geographicInofrmations {
+  h1 {
+    font-weight: 500;
+    font-size: 36px;
+    height: 51px;
+    width: 630px;
+    color: #ff6060;
+    line-height: 142.6%;
+  }
+
+  p {
+    margin-top: 55px;
+    color: #ff6060;
+    font-weight: 500;
+    line-height: 142.6%;
+    font-size: 18px;
+  }
+}
+
+.hostInformations {
+  display: flex;
+  padding-right: 12px;
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 0 0px 0px 20px;
+  }
+  p {
+    width: 90px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff6060;
+    line-height: 25.6px;
+    text-align: right;
+    margin-top: 2px;
+  }
+}
+
+.fullcard .accordions {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+
+  .accordion {
+    width: 580px;
+  }
+}
+
+.fullcard .accordion__content {
+  font-size: 18px;
+}
+.fullcard .active .accordion__content {
+  visibility: visible;
+  min-height: 300px;
+  font-size: 18px;
+  overflow: visible;
+  padding: 1rem;
+  opacity: 1;
+  transition: all 0.6s ease-in;
+}
+
+.fullcard .active .accordion__icon {
+  transition: all 0.4s ease-in;
+}
+
+
+.lodgementInformations {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px 0px 60px;
+
+  .tagsList {
+    display: flex; 
+    text-align: center;
+
+    .tagsItems {
+      margin: 0 15px 0px 0px;
+      background-color: #ff6060;
+      color: #ffff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      width: 115px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
 }
