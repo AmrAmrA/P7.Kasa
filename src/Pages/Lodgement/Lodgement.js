@@ -9,19 +9,30 @@ import leftArrow from "./leftArrow.png";
 import rightArrow from "./rightArrow.png";
 
 export default function Lodgement() {
+  // A hook who allows us to display data for every differnt ID inside the JSON File
   const params = useParams();
+  // Number of stars to compare with our stars array from JSON Data
+  const starsArray = [1, 2, 3, 4, 5];
+  // arbitrary value for our slider functions
+  const length = 5; 
+    // <div>
+    //   {Data.filter((Lodgement) => Lodgement.id === params.id).map((Lodgement, index) => (
+    //    <section>
+    //     {Lodgement.pictures.filter((photo, index) => (
+    //       console.log(photo.length)
+    //     ))}
+    //    </section>
+    //   ))}
+    // </div>
+
   const [current, setCurrent] = useState(0);
-  const length = 4;
-  console.log(Data);
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === length ? 1 - 1 : current - 1);
   };
-
-  const starsArray = [1, 2, 3, 4, 5];
   return (
     <div className="container__lodgement">
       {Data.filter((card) => card.id === params.id).map((card, index) => (

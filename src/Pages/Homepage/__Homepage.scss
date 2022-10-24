@@ -1,8 +1,7 @@
 .lodgementContainer {
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
   background-color: #f6f6f6;
   border-radius: 25px;
   padding: 25px;
@@ -14,8 +13,7 @@
   background-color: #ff6060;
   overflow: hidden;
   margin: 15px;
-  width: 400px;
-  height: 340px;
+  height: 283px;
 
   &__title {
     position: absolute;
@@ -27,8 +25,8 @@
   }
 
   &__cover {
-    width: 400px;
-    height: 340px;
+    width: 100%;
+    height: 283px;
     object-fit: cover;
     border-radius: 25px;
   }
@@ -77,5 +75,55 @@
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%;
+  }
+}
+
+// Responsive for ver large screens
+
+header,
+.homepage {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Responsive for small screens
+@media screen and (max-width: 1200px) {
+  .lodgementContainer {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 980px) {
+  .lodgementContainer {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (max-width: 540px) {
+  .lodgementContainer {
+    padding: 0px;
+  }
+
+  .homepage {
+    padding: 22px;
+  }
+
+  .box {
+    margin: 15px 5px;
+    border-radius: 10px;
+
+    &__cover {
+      border-radius: 10px;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .background {
+    &__title {
+      font-size: 30px;
+    }
   }
 }
