@@ -1,34 +1,33 @@
 .slider {
-  width: 1200px;
   position: relative;
   margin: auto;
 }
 .centralImage {
   width: 100%;
   height: 600px;
-  border-radius: 10px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.arrow {
+  width: 30px;
+  height: 50px;
 }
 
 .right__arrow {
   position: absolute;
   top: 50%;
-  right: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
+  transform: translate(-50%, -50%);
+  right: 2px;
   cursor: pointer;
-  user-select: none;
 }
 
 .left__arrow {
   position: absolute;
   top: 50%;
+  transform: translate(-50%, -50%);
   left: 32px;
-  font-size: 3rem;
-  color: #000;
-  z-index: 10;
   cursor: pointer;
-  user-select: none;
 }
 .slide {
   opacity: 0;
@@ -38,7 +37,6 @@
 .slide.active {
   opacity: 1;
 }
-
 
 .star {
   width: 30px;
@@ -54,13 +52,13 @@
 }
 
 .fullcard {
-  padding: 60px;
+  padding: 20px 90px;
 }
 
 .lodgementDescription {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px 0px 60px;
+  padding: 32px 0px 0px 0px;
 }
 
 .geographicInofrmations {
@@ -107,10 +105,10 @@
   width: 100%;
   margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
   .accordion {
-    width: 580px;
+    width: 48%;
   }
 }
 
@@ -134,7 +132,7 @@
 .lodgementInformations {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px 0px 60px;
+  padding: 32px 0px 0px 0px;
 
   .tagsList {
     display: flex;
@@ -152,6 +150,94 @@
       width: 115px;
       font-size: 14px;
       font-weight: 500;
+    }
+  }
+}
+
+// Responsive for small screens
+@media screen and (min-width: 1480px) {
+  .fullcard {
+    max-width: 1480px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 985px) {
+  .right__arrow,
+  .left__arrow {
+    width: 14px;
+    height: 20px;
+  }
+
+  .right__arrow {
+    right: 15px;
+  }
+
+  .centralImage {
+    width: 100%;
+    height: 270px;
+    border-radius: 10px;
+  }
+
+  .fullcard {
+    padding: 20px 22px;
+  }
+
+  .fullcard .accordions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .accordion {
+      width: 100%;
+      margin: 25px 0px;
+    }
+  }
+
+  .geographicInofrmations {
+    h1 {
+      font-weight: 500;
+      font-size: 20px;
+      width: 320px;
+    }
+    p {
+      margin-top: 8px;
+      color: #ff6060;
+      font-weight: 500;
+      line-height: 142.6%;
+      font-size: 16px;
+    }
+  }
+
+  .lodgementInformations {
+    flex-direction: column;
+    padding: 38px 0px 10px 0px;
+
+    .tagsList {
+      .tagsItems {
+        margin-bottom: 40px;
+        width: 85px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .star {
+    width: 15px;
+    height: 15px;
+  }
+
+  .hostInformations {
+    display: flex;
+    padding-right: 12px;
+    position: absolute;
+    top: 76%;
+    right: 10px;
+    img {
+      width: 52px;
+      height: 52px;
+    }
+    p {
+      font-size: 16px;
     }
   }
 }

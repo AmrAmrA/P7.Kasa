@@ -5,5 +5,10 @@
   height: 233px;
   display: block;
   margin: 30px auto 0px auto;
-  object-fit: fill;
+}
+
+@media screen and (max-width: 550px) {
+  .background__about {
+    height: 300px;
+  }
 }

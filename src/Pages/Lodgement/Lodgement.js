@@ -41,13 +41,13 @@ export default function Lodgement() {
             <img
               src={leftArrow}
               alt="Flèche gauche pour passer à la slide précédente"
-              className="left__arrow"
+              className="left__arrow arrow"
               onClick={prevSlide}
             />
             <img
               src={rightArrow}
               alt="Flèche droite pour passer à la slide suivante"
-              className="right__arrow"
+              className="right__arrow arrow"
               onClick={nextSlide}
             />
             {card.pictures.map((image, index) => {
