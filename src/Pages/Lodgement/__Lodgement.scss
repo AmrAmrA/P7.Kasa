@@ -16,17 +16,15 @@
 
 .right__arrow {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  right: 2px;
+  top: 43%;
+  right: 25px;
   cursor: pointer;
 }
 
 .left__arrow {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 32px;
+  top: 43%;
+  left: 25px;
   cursor: pointer;
 }
 .slide {
@@ -36,6 +34,15 @@
 
 .slide.active {
   opacity: 1;
+}
+
+.slide__number {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  right: 50%;
+  color: white;
+  font-size: 20px;
 }
 
 .star {

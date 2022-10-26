@@ -13,25 +13,16 @@ export default function Lodgement() {
   const params = useParams();
   // Number of stars to compare with our stars array from JSON Data
   const starsArray = [1, 2, 3, 4, 5];
-  // arbitrary value for our slider functions
-  const length = 5; 
-    // <div>
-    //   {Data.filter((Lodgement) => Lodgement.id === params.id).map((Lodgement, index) => (
-    //    <section>
-    //     {Lodgement.pictures.filter((photo, index) => (
-    //       console.log(photo.length)
-    //     ))}
-    //    </section>
-    //   ))}
-    // </div>
 
   const [current, setCurrent] = useState(0);
-  const nextSlide = () => {
+  const nextSlide = (length) => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-  const prevSlide = () => {
-    setCurrent(current === length ? 1 - 1 : current - 1);
+  const prevSlide = (length) => {
+    // Test si l'image actuelle est sur 0 ? Que faire si oui : Que faire si non
+    // Test si l'image actuelle est sur 0 ? récupère la longueur - 1 : Va une image en arrière
+    setCurrent(current === 0 ? length - 1 : current - 1);
   };
   return (
     <div className="container__lodgement">
@@ -42,13 +33,13 @@ export default function Lodgement() {
               src={leftArrow}
               alt="Flèche gauche pour passer à la slide précédente"
               className="left__arrow arrow"
-              onClick={prevSlide}
+              onClick={() => prevSlide(card.pictures.length)}
             />
             <img
               src={rightArrow}
               alt="Flèche droite pour passer à la slide suivante"
               className="right__arrow arrow"
-              onClick={nextSlide}
+              onClick={() => nextSlide(card.pictures.length)}
             />
             {card.pictures.map((image, index) => {
               return (
@@ -67,6 +58,7 @@ export default function Lodgement() {
                 </div>
               );
             })}
+            <p className="slide__number">{`${current + 1 }`}/{`${card.pictures.length}`}  </p>
           </section>
           <div className="lodgementDescription">
             <div className="geographicInofrmations">
