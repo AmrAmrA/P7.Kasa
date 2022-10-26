@@ -10,5 +10,7 @@
 @media screen and (max-width: 550px) {
   .background__about {
     height: 300px;
+    object-fit: cover;
+    object-position: right;
   }
 }

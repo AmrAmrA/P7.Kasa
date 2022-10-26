@@ -29,18 +29,24 @@ export default function Lodgement() {
       {Data.filter((card) => card.id === params.id).map((card, index) => (
         <div key={index} className="fullcard">
           <section className="slider">
-            <img
-              src={leftArrow}
-              alt="Flèche gauche pour passer à la slide précédente"
-              className="left__arrow arrow"
-              onClick={() => prevSlide(card.pictures.length)}
-            />
-            <img
-              src={rightArrow}
-              alt="Flèche droite pour passer à la slide suivante"
-              className="right__arrow arrow"
-              onClick={() => nextSlide(card.pictures.length)}
-            />
+            {(card.pictures.length > 1 ) ? (
+              <>
+                <img
+                  src={leftArrow}
+                  alt="Flèche gauche pour passer à la slide précédente"
+                  className="left__arrow arrow"
+                  onClick={() => prevSlide(card.pictures.length)}
+                />
+                <img
+                  src={rightArrow}
+                  alt="Flèche droite pour passer à la slide suivante"
+                  className="right__arrow arrow"
+                  onClick={() => nextSlide(card.pictures.length)}
+                  />
+              </>
+            ) : (
+              ""
+            )}
             {card.pictures.map((image, index) => {
               return (
                 <div
@@ -58,7 +64,9 @@ export default function Lodgement() {
                 </div>
               );
             })}
-            <p className="slide__number">{`${current + 1 }`}/{`${card.pictures.length}`}  </p>
+            <p className="slide__number">
+              {`${current + 1}`}/{`${card.pictures.length}`}{" "}
+            </p>
           </section>
           <div className="lodgementDescription">
             <div className="geographicInofrmations">
