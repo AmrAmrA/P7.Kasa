@@ -10,7 +10,7 @@
 .lodgementDescription {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
 }
 
 .geographicInofrmations {
@@ -18,6 +18,7 @@
     font-weight: 500;
     font-size: 36px;
     color: #ff6060;
+    width: 600px;
   }
 
   p {
@@ -30,21 +31,29 @@
 
 .hostInformations {
   display: flex;
+  flex-direction: column;
   padding-right: 12px;
-  img {
+  .profil__picture {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    margin: -20px 0px 0px 20px;
   }
   p {
     font-weight: 500;
     font-size: 18px;
     color: #ff6060;
     line-height: 25.6px;
-    text-align: right;
-    margin-top: 5px;
+    margin: 23px 20px 0px 0px;
   }
+}
+
+.name__image {
+  display: flex;
+  justify-content: space-between;
+}
+
+.starsList {
+  margin: 20px 0px 0px 40px;
 }
 
 .star {
@@ -89,31 +98,25 @@
   transition: all 0.4s ease-in;
 }
 
-.lodgementInformations {
+.tagsList {
   display: flex;
+  text-align: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 0px 0px 0px;
+  margin-top: 20px;
 
-  .tagsList {
-    display: flex;
+  .tagsItems {
+    margin: 15px 15px 0px 0px;
+    background-color: #ff6060;
+    color: #ffff;
     text-align: center;
-    flex-wrap: wrap;
-
-    .tagsItems {
-      margin: 0 15px 0px 0px;
-      background-color: #ff6060;
-      color: #ffff;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 28px;
-      width: 150px;
-      height: 50px;
-      font-size: 18px;
-      font-weight: 500;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 170px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 
@@ -142,6 +145,8 @@
 
   .lodgementDescription {
     padding-top: 10px;
+    position: relative;
+    flex-direction: column;
   }
 
   .geographicInofrmations {
@@ -149,6 +154,7 @@
       font-weight: 500;
       font-size: 24px;
       text-align: left;
+      width: auto;
     }
     p {
       margin-top: 8px;
@@ -175,23 +181,48 @@
     }
   }
 
+  .starsList {
+    margin: 20px 0px 0px 0px;
+  }
   .star {
     width: 22px;
     height: 22px;
   }
 
   .hostInformations {
+    margin-top: 20px;
     display: flex;
-    padding-right: 12px;
-    position: absolute;
-    top: 76%;
-    right: 10px;
-    img {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .profil__picture {
       width: 52px;
       height: 52px;
     }
     p {
       font-size: 16px;
+      margin-top: 18px;
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .star {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hostInformations {
+    .profil__picture {
+      width: 32px;
+      height: 32px;
+    }
+    p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  }
+  .name__image {
+    margin-top: 12px;
   }
 }

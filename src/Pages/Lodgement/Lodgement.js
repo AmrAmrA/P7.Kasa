@@ -22,32 +22,35 @@ export default function Lodgement() {
             <ul className="geographicInofrmations">
               <h1>{card.title}</h1>
               <p>{card.location}</p>
+              <ul className="tagsList">
+                {card.tags.map((tagsItem, index) => (
+                  <li className="tagsItems"> {tagsItem} </li>
+                ))}
+              </ul>
             </ul>
+
             <ul className="hostInformations">
-              <p>{card.host.name}</p>
-              <img
-                src={card.host.picture}
-                alt={`L'hôte de la maison: ${card.host.name}`}
-              />
-            </ul>
-          </article>
-          <article className="lodgementInformations">
-            <ul className="tagsList">
-              {card.tags.map((tagsItem, index) => (
-                <li className="tagsItems"> {tagsItem} </li>
-              ))}
-            </ul>
-            <div className="starsList">
-              {starsArray.map((index) => (
+              <div className="name__image">
+                <p>{card.host.name}</p>
                 <img
-                  alt="Nombre d'étoiles pour évaluer la qualité du logement"
-                  className="star"
-                  key={index}
-                  // A ternary to present the number of red stars according to the stars that come from the Json file
-                  src={index <= card.rating ? redStar : greyStar}
+                  src={card.host.picture}
+                  alt={`L'hôte de la maison: ${card.host.name}`}
+                  className = "profil__picture"
                 />
-              ))}
-            </div>
+              </div>
+                <div className="starsList">
+                  {starsArray.map((index) => (
+                    <img
+                      alt="Nombre d'étoiles pour évaluer la qualité du logement"
+                      className="star"
+                      key={index}
+                      // A ternary to present the number of red stars according to the stars that come from the Json file
+                      src={index <= card.rating ? redStar : greyStar}
+                    />
+                  ))}
+                </div>
+
+            </ul>
           </article>
           <div className="accordions">
             <Accordion title="Description" content={card.description} />
