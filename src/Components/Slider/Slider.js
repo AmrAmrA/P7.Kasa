@@ -64,7 +64,7 @@ export default function Slider() {
           })}
           {/* Shows the number of the image we are on in relation to the whole slider */}
           <p className="slide__number">
-            {`${current + 1}`}/{`${card.pictures.length}`}{" "}
+            {`${current + 1}`}/{`${card.pictures.length}`}
           </p>
         </section>
       ))}

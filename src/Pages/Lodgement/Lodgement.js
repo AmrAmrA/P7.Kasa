@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Data } from "../../Data";
 import Accordion from "../../Components/Accordion/Accordion";
 import Slider from "../../Components/Slider/Slider";
+import Error from "../../Pages/Error/Error";
 import "./__Lodgement.scss";
 import redStar from "./redStar.png";
 import greyStar from "./greyStar.png";
@@ -13,6 +14,11 @@ export default function Lodgement() {
   // Number of stars to compare with our stars array from JSON Data
   const starsArray = [1, 2, 3, 4, 5];
 
+  const index = Data.findIndex(el => el.id === params.id)
+
+  if(index === -1)
+    return <Error/>
+ 
   return (
     <div className="container__lodgement">
       <Slider />
@@ -28,28 +34,26 @@ export default function Lodgement() {
                 ))}
               </ul>
             </ul>
-
             <ul className="hostInformations">
               <div className="name__image">
                 <p>{card.host.name}</p>
                 <img
                   src={card.host.picture}
                   alt={`L'hôte de la maison: ${card.host.name}`}
-                  className = "profil__picture"
+                  className="profil__picture"
                 />
               </div>
-                <div className="starsList">
-                  {starsArray.map((index) => (
-                    <img
-                      alt="Nombre d'étoiles pour évaluer la qualité du logement"
-                      className="star"
-                      key={index}
-                      // A ternary to present the number of red stars according to the stars that come from the Json file
-                      src={index <= card.rating ? redStar : greyStar}
-                    />
-                  ))}
-                </div>
-
+              <div className="starsList">
+                {starsArray.map((index) => (
+                  <img
+                    alt="Nombre d'étoiles pour évaluer la qualité du logement"
+                    className="star"
+                    key={index}
+                    // A ternary to present the number of red stars according to the stars that come from the Json file
+                    src={index <= card.rating ? redStar : greyStar}
+                  />
+                ))}
+              </div>
             </ul>
           </article>
           <div className="accordions">
