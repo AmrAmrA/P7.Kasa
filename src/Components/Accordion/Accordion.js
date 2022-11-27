@@ -12,15 +12,14 @@ function Accordion({ title, content }) {
   return (
     <div className={`accordion ${active && "active"} `}>
       <div className="accordion__title" onClick={handleToggle}>
-        {" "}
-        {title}{" "}
+        <p>{title}</p>
         <img
           src={Accordion__icon}
           alt="Une flèche sur laquelle appuyer pour ouvrir ou fermer l'Accordion"
           className="accordion__icon"
         />
       </div>
-      <div className="accordion__content">{content}</div>
+      <p className="accordion__content">{content}</p>
     </div>
   );
 }

@@ -1,4 +1,6 @@
-$redKasa: #ff6060;
+.active {
+  text-decoration: underline;
+}
 
 header {
   display: flex;
@@ -6,6 +8,7 @@ header {
   line-height: 34.22px;
   padding: 60px 40px 20px 60px;
 }
+
 .logo__kasa {
   width: 210px;
   height: 68px;
@@ -15,9 +18,10 @@ header {
   display: flex;
   align-items: center;
   height: 85px;
+
   &__item {
     padding: 0px 30px;
-    color: $redKasa;
+    color: #ff6060;
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -37,6 +41,7 @@ header {
 
   .navigation__list {
     height: 60px;
+
     &__item {
       font-size: 16px;
       padding: 0px 10px;
@@ -50,8 +55,10 @@ header {
     width: 100px;
     height: 30px;
   }
+
   .navigation__list {
     height: 40px;
+
     &__item {
       font-size: 14px;
       padding: 0px 5px;

@@ -4,24 +4,40 @@ import { NavLink } from "react-router-dom";
 import logoKasa from "./logo.png";
 
 export default function Navbar() {
+  /* Class to toggle to add an underline 
+     on the current page name 
+  */
+  let activeLink = "active";
+  let normalLink = "";
   return (
     <header>
-      <NavLink to="/">
-        {" "}
+      <NavLink end to="/">
         <img
           src={logoKasa}
           alt="Logo de l'entreprise Kasa en rouge"
           className="logo__kasa"
-        />{" "}
+        />
       </NavLink>
       <nav className="navigation">
         <ul className="navigation__list">
           <li className="navigation__list__item">
-            {" "}
-            <NavLink to="/"> Accueil </NavLink>{" "}
+            <NavLink
+              end
+              to="/"
+              // Ternary to toggle the underline style on the current link of our application
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              Accueil
+            </NavLink>
           </li>
           <li className="navigation__list__item">
-            <NavLink to="/apropos"> A propos </NavLink>{" "}
+            <NavLink
+              end
+              to="/apropos"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              A propos
+            </NavLink>
           </li>
         </ul>
       </nav>

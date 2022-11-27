@@ -14,18 +14,17 @@ export default function Lodgement() {
   // Number of stars to compare with our stars array from JSON Data
   const starsArray = [1, 2, 3, 4, 5];
 
-  const index = Data.findIndex(el => el.id === params.id)
+  const index = Data.findIndex((el) => el.id === params.id);
 
-  if(index === -1)
-    return <Error/>
- 
+  if (index === -1) return <Error />;
+
   return (
     <div className="container__lodgement">
       <Slider />
       {Data.filter((card) => card.id === params.id).map((card, index) => (
-        <section key={index} className="fullcard">
+        <main key={index} className="fullcard">
           <article className="lodgementDescription">
-            <ul className="geographicInofrmations">
+            <div className="geographicInofrmations">
               <h1>{card.title}</h1>
               <p>{card.location}</p>
               <ul className="tagsList">
@@ -33,8 +32,8 @@ export default function Lodgement() {
                   <li className="tagsItems"> {tagsItem} </li>
                 ))}
               </ul>
-            </ul>
-            <ul className="hostInformations">
+            </div>
+            <div className="hostInformations">
               <div className="name__image">
                 <p>{card.host.name}</p>
                 <img
@@ -54,7 +53,7 @@ export default function Lodgement() {
                   />
                 ))}
               </div>
-            </ul>
+            </div>
           </article>
           <div className="accordions">
             <Accordion title="Description" content={card.description} />
@@ -67,7 +66,7 @@ export default function Lodgement() {
               </ul>
             />
           </div>
-        </section>
+        </main>
       ))}
     </div>
   );
