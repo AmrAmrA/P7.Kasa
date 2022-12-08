@@ -7,7 +7,7 @@ export default function Navbar() {
   /* Class to toggle to add an underline 
      on the current page name 
   */
-  let activeLink = "active";
+  let activeLink = "currentLink";
   let normalLink = "";
   return (
     <header>

@@ -19,10 +19,10 @@ export default function Lodgement() {
   if (index === -1) return <Error />;
 
   return (
-    <div className="container__lodgement">
+    <main className="container__lodgement">
       <Slider />
       {Data.filter((card) => card.id === params.id).map((card, index) => (
-        <main key={index} className="fullcard">
+        <section key={index} className="fullcard">
           <article className="lodgementDescription">
             <div className="geographicInofrmations">
               <h1>{card.title}</h1>
@@ -66,8 +66,8 @@ export default function Lodgement() {
               </ul>
             />
           </div>
-        </main>
+        </section>
       ))}
-    </div>
+    </main>
   );
 }

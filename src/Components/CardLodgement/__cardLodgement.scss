@@ -1,0 +1,86 @@
+.lodgementContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+    padding: 25px;
+  }
+  
+  .box {
+    position: relative;
+    border-radius: 25px;
+    background-color: #ff6060;
+    overflow: hidden;
+    margin: 15px;
+    height: 283px;
+  
+    &__title {
+      position: absolute;
+      font-size: 20px;
+      color: #fff;
+      top: 82%;
+      left: 5%;
+      font-weight: bold;
+    }
+  
+    &__cover {
+      width: 100%;
+      height: 283px;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+  
+    &__filter {
+      position: absolute;
+      bottom: 2px;
+      background: linear-gradient(180deg, transparent 37%, rgba(0, 0, 0, 0.1));
+      width: 400px;
+      height: 106px;
+      border-radius: 25px;
+    }
+  }
+
+
+  // Responsive for small screens
+@media screen and (max-width: 1200px) {
+    .lodgementContainer {
+      grid-template-columns: auto auto;
+    }
+  }
+  @media screen and (max-width: 980px) {
+    .lodgementContainer {
+      grid-template-columns: auto;
+    }
+  }
+  @media screen and (max-width: 540px) {
+    .lodgementContainer {
+      padding: 0px;
+    }
+  
+    .homepage {
+      padding: 22px;
+    }
+  
+    .box {
+      margin: 15px 5px;
+      border-radius: 10px;
+  
+      &__cover {
+        border-radius: 10px;
+      }
+  
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 980px) {
+    .background {
+      &__title {
+        font-size: 30px;
+      }
+    }
+  }
+  
