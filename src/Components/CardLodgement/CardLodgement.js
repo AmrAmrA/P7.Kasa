@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Data } from "../../Data";
+import LodgmentData from '../../logements'
 import "./__cardLodgement.scss";
 export default function CardLodgement() {
   return (
     <section className="lodgementContainer">
-      {Data.map((card, index) => (
+      {LodgmentData.map((card, index) => (
         <article>
           <Link to={`/logements/${card.id}`}>
             <div className="box">

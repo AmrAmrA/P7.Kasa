@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Data } from "../../Data";
+import LodgmentData from '../../logements'
 import Accordion from "../../Components/Accordion/Accordion";
 import Slider from "../../Components/Slider/Slider";
 import Error from "../../Pages/Error/Error";
@@ -14,14 +14,14 @@ export default function Lodgement() {
   // Number of stars to compare with our stars array from JSON Data
   const starsArray = [1, 2, 3, 4, 5];
 
-  const index = Data.findIndex((el) => el.id === params.id);
+  const index = LodgmentData.findIndex((el) => el.id === params.id);
 
   if (index === -1) return <Error />;
 
   return (
     <main className="container__lodgement">
       <Slider />
-      {Data.filter((card) => card.id === params.id).map((card, index) => (
+      {LodgmentData.filter((card) => card.id === params.id).map((card, index) => (
         <section key={index} className="fullcard">
           <article className="lodgementDescription">
             <div className="geographicInofrmations">

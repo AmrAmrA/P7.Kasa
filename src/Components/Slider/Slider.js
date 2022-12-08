@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Data } from "../../Data";
+import LodgmentData from '../../logements'
 import leftArrow from "./leftArrow.png";
 import rightArrow from "./rightArrow.png";
 import "./__Slider.scss";
@@ -23,7 +23,7 @@ export default function Slider() {
   };
   return (
     <>
-      {Data.filter((card) => card.id === params.id).map((card, index) => (
+      {LodgmentData.filter((card) => card.id === params.id).map((card, index) => (
         <section key={index} className="slider">
           {/* A ternary: Does our slider contain more than one image: display the arrows 
           otherwise do not display them  */}
