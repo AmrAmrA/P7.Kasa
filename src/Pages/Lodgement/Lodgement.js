@@ -4,6 +4,8 @@ import LodgmentData from "../../logements";
 import Accordion from "../../Components/Accordion/Accordion";
 import Slider from "../../Components/Slider/Slider";
 import StarsRating from "../../Components/StarsRating/StarsRating";
+import Tags from "../../Components/Tags/Tags";
+import Host from "../../Components/Host/Host";
 import Error from "../../Pages/Error/Error";
 import "./__Lodgement.scss";
 
@@ -23,21 +25,10 @@ export default function Lodgement() {
               <div className="geographicInofrmations">
                 <h1>{card.title}</h1>
                 <p>{card.location}</p>
-                <ul className="tagsList">
-                  {card.tags.map((tagsItem, index) => (
-                    <li className="tagsItems"> {tagsItem} </li>
-                  ))}
-                </ul>
+                <Tags />
               </div>
               <div className="hostInformations">
-                <div className="name__image">
-                  <p>{card.host.name}</p>
-                  <img
-                    src={card.host.picture}
-                    alt={`L'hôte de la maison: ${card.host.name}`}
-                    className="profil__picture"
-                  />
-                </div>
+                <Host />
                 <StarsRating />
               </div>
             </article>

@@ -29,28 +29,6 @@
   }
 }
 
-.hostInformations {
-  display: flex;
-  flex-direction: column;
-  padding-right: 12px;
-  .profil__picture {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-  }
-  p {
-    font-weight: 500;
-    font-size: 18px;
-    color: #ff6060;
-    line-height: 25.6px;
-    margin: 23px 20px 0px 0px;
-  }
-}
-
-.name__image {
-  display: flex;
-  justify-content: space-between;
-}
 
 
 .image__lodgement {
@@ -87,28 +65,6 @@
 
 .fullcard .active .accordion__icon {
   transition: all 0.4s ease-in;
-}
-
-.tagsList {
-  display: flex;
-  text-align: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-
-  .tagsItems {
-    margin: 15px 15px 0px 0px;
-    background-color: #ff6060;
-    color: #ffff;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    width: 200px;
-    height: 30px;
-    font-size: 18px;
-    font-weight: 500;
-  }
 }
 
 // Responsive for small screens
@@ -160,53 +116,13 @@
   .lodgementInformations {
     flex-direction: column;
     padding: 38px 0px 10px 0px;
-
-    .tagsList {
-      .tagsItems {
-        margin-bottom: 40px;
-        width: 120px;
-        height: 35px;
-        font-size: 14px;
-        border-radius: 5px;
-      }
-    }
   }
 
-
-  .hostInformations {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-
-    .profil__picture {
-      width: 52px;
-      height: 52px;
-    }
-    p {
-      font-size: 16px;
-      margin-top: 18px;
-    }
-  }
 }
 
 @media screen and (max-width: 400px) {
   .star {
     width: 12px;
     height: 12px;
-  }
-
-  .hostInformations {
-    .profil__picture {
-      width: 32px;
-      height: 32px;
-    }
-    p {
-      font-size: 12px;
-      margin-top: 5px;
-    }
-  }
-  .name__image {
-    margin-top: 12px;
   }
 }

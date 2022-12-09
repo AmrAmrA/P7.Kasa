@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import greyStar from "../../greyStar.png";
-import redStar from "../../redStar.png";
+import greyStar from "./greyStar.png";
+import redStar from "./redStar.png";
 import LodgmentData from "../../logements";
 import "./__StarsRating.scss";
 
