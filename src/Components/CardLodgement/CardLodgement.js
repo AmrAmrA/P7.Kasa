@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LodgmentData from '../../logements'
+import LodgmentData from "../../logements";
 import "./__cardLodgement.scss";
 export default function CardLodgement() {
   return (
